@@ -1,22 +1,16 @@
-"use client";
-import { useState } from "react";
 import styles from "./tasks.module.scss";
 import TaskItem from "./TaskItem";
 
-export default function Tasks() {
-    const [tasks, setTasks] = useState([
-        { id: 1, text: "Lavar as mãos", completed: false },
-        { id: 2, text: "Fazer um bolo", completed: false },
-        { id: 3, text: "Lavar a louça", completed: false },
-        { id: 4, text: "Levar o lixo para fora", completed: true },
-    ]);
+export default function Tasks({ tasks, setTasks }) {
 
+    // Função para marcar/desmarcar tarefas
     const toggleTask = (id) => {
         setTasks(tasks.map(task =>
             task.id === id ? { ...task, completed: !task.completed } : task
         ));
     };
 
+    // Função para remover uma tarefa
     const deleteTask = (id, e) => {
         e.stopPropagation();
         setTasks(tasks.filter(task => task.id !== id));
