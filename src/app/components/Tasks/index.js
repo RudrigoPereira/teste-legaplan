@@ -1,7 +1,7 @@
 import styles from "./tasks.module.scss";
 import TaskItem from "./TaskItem";
 
-export default function Tasks({ tasks, setTasks }) {
+export default function Tasks({ tasks, setTasks, openModalDelete }) {
 
     // Função para marcar/desmarcar tarefas
     const toggleTask = (id) => {
@@ -11,10 +11,10 @@ export default function Tasks({ tasks, setTasks }) {
     };
 
     // Função para remover uma tarefa
-    const deleteTask = (id, e) => {
-        e.stopPropagation();
-        setTasks(tasks.filter(task => task.id !== id));
-    };
+    // const deleteTask = (id, e) => {
+    //     e.stopPropagation();
+    //     setTasks(tasks.filter(task => task.id !== id));
+    // };
 
     const openTasks = tasks.filter(task => !task.completed);
     const completedTasks = tasks.filter(task => task.completed);
@@ -32,7 +32,7 @@ export default function Tasks({ tasks, setTasks }) {
                                 key={task.id}
                                 task={task}
                                 toggleTask={toggleTask}
-                                deleteTask={deleteTask}
+                                openModalDelete={openModalDelete}
                             />
                         ))}
                     </ul>
@@ -50,7 +50,7 @@ export default function Tasks({ tasks, setTasks }) {
                                 key={task.id}
                                 task={task}
                                 toggleTask={toggleTask}
-                                deleteTask={deleteTask}
+                                openModalDelete={openModalDelete}
                             />
                         ))}
                     </ul>

@@ -6,7 +6,7 @@
     height: 100%;
     background: white;
 }
-
+  
 .modalContent {
     background: white;
     padding: 32px;
@@ -19,14 +19,9 @@
         font-weight: 500;
     }
 
-    input {
-        outline: none;
-        width: 100%;
-        padding: 16px;
-        border: 1px solid #D7DDE9;
-        border-radius: 8px;
+    p {
         font-size: 16px;
-        margin-top: 8px;
+        color: #333;
     }
 
     .modalActions {
@@ -48,40 +43,40 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                    background-color: rgba(231, 238, 251, 0.7);
+                background-color: rgba(231, 238, 251, 0.5);
                 }
             }
 
             &:last-child {
-                background: linear-gradient(90deg, #0796D3 0%, #53C0F0 100%);
+                background: linear-gradient(90deg, #D30707 0%, #F05353 100%);
                 color: white;
                 transition: color 0.3s ease;
 
                 &:hover {
-                    background: linear-gradient(90deg, rgba(7, 150, 211, 0.8) 0%, rgba(83, 193, 240, 0.8) 100%);
+                    background: linear-gradient(90deg, rgba(211, 7, 7, 0.8) 0%, rgba(240, 83, 83, 0.8) 100%);
                 }
             }
         }
     }
 }
-
-@media (min-width:740px) {
+  
+  @media (min-width:740px) {
     .modalOverlay {
-        background: rgba(255, 255, 255, 0.7);
-        backdrop-filter: blur(3px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(3px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-
+  
     .modalContent {
-        border-radius: 16px;
-        width: 450px;
-        box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 18%);
+      border-radius: 16px;
+      width: 450px;
+      box-shadow: 0px 24px 48px -12px rgba(16, 24, 40, 18%);
 
-        .modalActions {
-            flex-direction: row;
-        }
+      .modalActions {
+        flex-direction: row;
+      }
     }
-}
+  }
   
