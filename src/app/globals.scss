@@ -10,10 +10,10 @@ $foreground-dark: #ededed;
   --foreground: $foreground-light;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
-    --background: $background-dark;
-    --foreground: $foreground-dark;
+    --background: $background-light;
+    --foreground: $foreground-light;
   }
 }
 
