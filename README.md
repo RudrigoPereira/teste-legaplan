@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FocalPoint
 
-## Getting Started
+Desafio proposto pela empresa [Legaplan](https://www.legaplan.com.br)
 
-First, run the development server:
+Este projeto é uma aplicação de lista de tarefas desenvolvida em **Next.js** utilizando o **App Router** e **SCSS**. O objetivo deste projeto é criar uma aplicação funcional e responsiva que permita a criação, visualização, edição e exclusão de tarefas, com armazenamento local utilizando **localStorage**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🛠️ Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js (App Router)**: Framework React para renderização do lado do servidor e construção de aplicações web rápidas.
+- **SCSS**: Utilizado para criar estilos modulares e componentes com fidelidade máxima ao design.
+- **LocalStorage**: Persistência de dados para armazenar e recuperar as tarefas.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 🎯 Funcionalidades
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Adicionar novas tarefas.
+- Marcar/desmarcar tarefas como concluídas.
+- Excluir tarefas.
+- Armazenamento de tarefas no **LocalStorage** para manter o estado entre as sessões.
+- Interface amigável e design responsivo.
 
-## Learn More
+## 🖥️ Como rodar o projeto
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone este repositório:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/seu-usuario/task-list-app.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Acesse o diretório do projeto:
 
-## Deploy on Vercel
+   ```bash
+   cd task-list-app
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Instale as dependências:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   ```bash
+   npm install
+   ```
+
+4. Execute o servidor de desenvolvimento:
+   
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse a aplicação no navegador:
+      
+   ```bash
+   http://localhost:3000
+   ```
+
+Feito por [Rodrigo Ferreira Pereira](https://www.linkedin.com/in/rodrigoferreirapereira/).
