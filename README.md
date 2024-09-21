@@ -1,6 +1,6 @@
 # FocalPoint
 
-Desafio proposto pela empresa [Legaplan](https://www.legaplan.com.br)
+Desafio proposto pela empresa [Legaplan](https://www.legaplan.com.br).
 
 Este projeto é uma aplicação de lista de tarefas desenvolvida em **Next.js** utilizando o **App Router** e **SCSS**. O objetivo deste projeto é criar uma aplicação funcional e responsiva que permita a criação, visualização, edição e exclusão de tarefas, com armazenamento local utilizando **localStorage**.
 
