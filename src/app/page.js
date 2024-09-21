@@ -1,11 +1,16 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import Header from "./components/Header";
+import Tasks from "./components/Tasks";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <Header/>
+      <Header />
+      <main className={styles.main}>
+        <Tasks />
+      </main>
+      
       {/* <main className={styles.main}>
         <Image
           className={styles.logo}

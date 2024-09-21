@@ -36,8 +36,9 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <Image
+                className={styles.logo}
                 src={logo}
-                alt="Next.js logo"
+                alt="Logo Focal Point"
                 width={150}
                 height={36}
             />

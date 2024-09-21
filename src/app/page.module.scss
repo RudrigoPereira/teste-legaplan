@@ -3,6 +3,12 @@ $page-padding-mobile: 24px 24px;
 
 .page {
     padding: $page-padding-mobile;
+
+    .main {
+        margin-top: 32px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (min-width:740px) {
