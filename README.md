@@ -23,13 +23,13 @@ Este projeto é uma aplicação de lista de tarefas desenvolvida em **Next.js** 
 1. Clone este repositório:
 
    ```bash
-   git clone https://github.com/seu-usuario/task-list-app.git
+   git clone https://github.com/RudrigoPereira/teste-legaplan.git
    ```
 
 2. Acesse o diretório do projeto:
 
    ```bash
-   cd task-list-app
+   cd teste-legaplan
    ```
 
 3. Instale as dependências:
@@ -49,5 +49,7 @@ Este projeto é uma aplicação de lista de tarefas desenvolvida em **Next.js** 
    ```bash
    http://localhost:3000
    ```
+
+Deploy no Vercel: [FocalPoint](https://focalpoint-rfp.vercel.app)
 
 Feito por [Rodrigo Ferreira Pereira](https://www.linkedin.com/in/rodrigoferreirapereira/).
