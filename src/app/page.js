@@ -1,5 +1,5 @@
 "use client"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./page.module.scss";
 import Header from "./components/Header";
 import Tasks from "./components/Tasks";
@@ -11,6 +11,23 @@ export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isModalDeleteOpen, setIsModalDeleteOpen] = useState(false);
   const [taskToDelete, setTaskToDelete] = useState(null);
+
+  // Carregar as tarefas do Local Storage quando o componente é montado
+  useEffect(() => {
+    const storedTasks = localStorage.getItem("tasks");
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks))
+    }
+  }, []);
+
+  // Salvar as tarefas no Local Storage sempre que o estado de tasks mudar
+  useEffect(() => {
+    if (tasks.length > 0) {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+    } else {
+      localStorage.removeItem("tasks");
+    }
+  }, [tasks]);
 
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
@@ -34,14 +51,13 @@ export default function Home() {
   // Função para remover uma tarefa
   const deleteTask = (taskId) => {
     setTasks(tasks.filter(task => task.id !== taskId));
-    closeModalDelete(); // Fechar modal após a exclusão
+    closeModalDelete();
   };
 
   return (
     <div className={styles.page}>
       <Header />
       <main className={styles.main}>
-        {/* <Tasks tasks={tasks} setTasks={setTasks} /> */}
         <Tasks tasks={tasks} setTasks={setTasks} openModalDelete={openModalDelete} />
         <button className={styles.addTaskButton} onClick={openModal}>
           Adicionar nova tarefa

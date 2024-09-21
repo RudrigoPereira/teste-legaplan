@@ -14,8 +14,8 @@ export default function TaskItem({ task, toggleTask, openModalDelete }) {
             <FiTrash 
                 className={styles.deleteIcon} 
                 onClick={(e) => {
-                e.stopPropagation(); // Impede que o clique na lixeira marque/desmarque a tarefa
-                openModalDelete(task);
+                    e.stopPropagation();
+                    openModalDelete(task);
                 }} 
             />
         </li>
